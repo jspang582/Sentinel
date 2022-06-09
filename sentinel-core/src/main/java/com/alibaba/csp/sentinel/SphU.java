@@ -22,6 +22,14 @@ import com.alibaba.csp.sentinel.slots.block.Rule;
 import com.alibaba.csp.sentinel.slots.system.SystemRule;
 
 /**
+ * 用于记录统计数据和执行资源规则检查的基本Sentinel API。
+ *
+ * 从概念上讲，需要保护的物理或逻辑资源应该用一个条目包围起来。如果满足任何条件，对该资源的请求将被阻塞。当超过任何规则的阈值时。一旦被阻塞，就会抛出一个BlockException。
+ *
+ * 为了配置标准，我们可以使用XxxRuleManager.loadRules()来加载规则。
+ *
+ * 确保SphU.entry()和Entry.exit()在同一个线程中配对，否则将抛出ErrorEntryFreeException。
+ *
  * <p>The fundamental Sentinel API for recording statistics and performing rule checking for resources.</p>
  * <p>
  * Conceptually, physical or logical resource that need protection should be
