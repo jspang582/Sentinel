@@ -24,6 +24,14 @@ import com.alibaba.csp.sentinel.slotchain.ResourceWrapper;
 import com.alibaba.csp.sentinel.context.Context;
 
 /**
+ * 每个SphU.entry()将返回一个entry。这个类保存当前调用的信息:
+ *      createTime，此表项的创建时间，用于rt统计。
+ *      current Node，即当前上下文中资源的统计信息。
+ *      origin节点，即为特定原点的统计信息。通常起源可以是服务消费者的应用程序名称。
+ *      ResourceWrapper，这是资源名。
+ *
+ * 如果在同一个Context中多次调用SphU.entry()，就会创建一个调用树，因此父条目或子条目可以由它保存以形成树。因为Context总是在调用树中保存当前条目，所以每次exit()调用都应该将Context.setCurEntry(entry)修改为它的父条目。
+ *
  * Each {@link SphU}#entry() will return an {@link Entry}. This class holds information of current invocation:<br/>
  *
  * <ul>
@@ -92,6 +100,8 @@ public abstract class Entry implements AutoCloseable {
     }
 
     /**
+     * 支持try-with-resources语法。
+     *
      * Equivalent to {@link #exit()}. Support try-with-resources since JDK 1.7.
      *
      * @since 1.5.0

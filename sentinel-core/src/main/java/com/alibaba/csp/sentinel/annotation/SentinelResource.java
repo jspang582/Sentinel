@@ -20,6 +20,8 @@ import com.alibaba.csp.sentinel.EntryType;
 import java.lang.annotation.*;
 
 /**
+ * 该注解表示Sentinel资源的定义。
+ *
  * The annotation indicates a definition of Sentinel resource.
  *
  * @author Eric Zhao

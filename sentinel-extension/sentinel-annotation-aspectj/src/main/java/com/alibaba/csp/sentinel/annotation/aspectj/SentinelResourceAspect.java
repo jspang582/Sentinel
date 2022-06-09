@@ -28,6 +28,8 @@ import org.aspectj.lang.annotation.Pointcut;
 import java.lang.reflect.Method;
 
 /**
+ * 支持@SentinelResource注解的Aspect。
+ *
  * Aspect for methods with {@link SentinelResource} annotation.
  *
  * @author Eric Zhao
