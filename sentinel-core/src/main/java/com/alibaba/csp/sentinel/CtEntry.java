@@ -27,6 +27,8 @@ import com.alibaba.csp.sentinel.slotchain.ResourceWrapper;
 import com.alibaba.csp.sentinel.util.function.BiConsumer;
 
 /**
+ * 当前上下文中的链接Entry。
+ *
  * Linked entry within current context.
  *
  * @author jialiang.linjl
