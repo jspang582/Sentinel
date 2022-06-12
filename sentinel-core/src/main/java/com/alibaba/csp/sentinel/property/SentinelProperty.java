@@ -16,6 +16,10 @@
 package com.alibaba.csp.sentinel.property;
 
 /**
+ * 该类保存配置的当前值，并负责在配置更新时通知添加到此的所有PropertyListeners。
+ *
+ * 注意，不是每次updateValue(对象newValue)调用都应该通知监听器，只有当newValue不等于旧值时，才需要通知。
+ *
  * <p>
  * This class holds current value of the config, and is responsible for informing all {@link PropertyListener}s
  * added on this when the config is updated.

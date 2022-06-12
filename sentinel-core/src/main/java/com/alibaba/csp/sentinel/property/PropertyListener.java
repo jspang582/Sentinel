@@ -16,6 +16,8 @@
 package com.alibaba.csp.sentinel.property;
 
 /**
+ * 当SentinelProperty.updateValue(Object)需要通知监听器时，这个类保存回调方法。
+ *
  * This class holds callback method when {@link SentinelProperty#updateValue(Object)} need inform the listener
  *
  * @author jialiang.linjl
@@ -23,6 +25,8 @@ package com.alibaba.csp.sentinel.property;
 public interface PropertyListener<T> {
 
     /**
+     * 当SentinelProperty.updateValue(Object)需要通知监听器时的回调方法。
+     *
      * Callback method when {@link SentinelProperty#updateValue(Object)} need inform the listener.
      *
      * @param value updated value.
@@ -30,6 +34,8 @@ public interface PropertyListener<T> {
     void configUpdate(T value);
 
     /**
+     * 第一次加载该值。
+     *
      * The first time of the {@code value}'s load.
      *
      * @param value the value loaded.

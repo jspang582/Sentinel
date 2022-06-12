@@ -16,6 +16,9 @@
 package com.alibaba.csp.sentinel.slots.block;
 
 /**
+ * 由于流量控制、断路或系统保护触发，被Sentinel阻塞的抽象异常。
+ *
+ *
  * Abstract exception indicating blocked by Sentinel due to flow control,
  * circuit breaking or system protection triggered.
  *
