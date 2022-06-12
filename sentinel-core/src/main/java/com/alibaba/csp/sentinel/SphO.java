@@ -28,6 +28,13 @@ import com.alibaba.csp.sentinel.slots.system.SystemRule;
 import com.alibaba.csp.sentinel.slots.system.SystemRuleManager;
 
 /**
+ * 从概念上讲，需要保护的物理或逻辑资源应该用一个条目包围起来。如果满足任何条件，对该资源的请求将被阻塞。当超过任何规则的阈值时。一旦被阻塞，SphO.entry()将返回false。
+ *
+ * 要配置标准，可以使用XXXRuleManager.loadRules()添加规则
+ * 如；FlowRuleManager.loadRules(List) DegradeRuleManager.loadRules(List) SystemRuleManager.loadRules(List)。
+ *
+ * 确保SphO.entry()和exit()在同一个线程中配对，否则将抛出ErrorEntryFreeException。
+ *
  * Conceptually, physical or logical resource that need protection should be
  * surrounded by an entry. The requests to this resource will be blocked if any
  * criteria is met, eg. when any {@link Rule}'s threshold is exceeded. Once blocked,

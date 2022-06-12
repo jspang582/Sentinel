@@ -24,6 +24,8 @@ import com.alibaba.csp.sentinel.log.RecordLog;
 import com.alibaba.csp.sentinel.spi.SpiLoader;
 
 /**
+ * 加载注册的init函数并按顺序执行。
+ *
  * Load registered init functions and execute in order.
  *
  * @author Eric Zhao

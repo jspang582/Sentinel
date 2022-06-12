@@ -18,6 +18,10 @@ package com.alibaba.csp.sentinel;
 import com.alibaba.csp.sentinel.init.InitExecutor;
 
 /**
+ * 用于触发所有Sentinel的初始化的类。
+ *
+ * 注意:为了防止死锁，其他类的静态代码块或静态字段永远不要引用这个类。
+ *
  * Sentinel Env. This class will trigger all initialization for Sentinel.
  *
  * <p>

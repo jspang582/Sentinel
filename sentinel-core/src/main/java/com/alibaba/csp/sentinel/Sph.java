@@ -21,6 +21,8 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.system.SystemRule;
 
 /**
+ * 统计记录和资源规则检查的基本接口。
+ *
  * The basic interface for recording statistics and performing rule checking for resources.
  *
  * @author qinan.qn

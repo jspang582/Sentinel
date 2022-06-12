@@ -23,6 +23,8 @@ import com.alibaba.csp.sentinel.util.AssertUtil;
 import com.alibaba.csp.sentinel.util.function.Predicate;
 
 /**
+ * 该类用于记录BlockException外的其他异常。
+ *
  * This class is used to record other exceptions except block exception.
  *
  * @author jialiang.linjl
