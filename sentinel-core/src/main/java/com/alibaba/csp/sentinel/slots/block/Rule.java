@@ -16,6 +16,8 @@
 package com.alibaba.csp.sentinel.slots.block;
 
 /**
+ * 所有规则的基本接口。
+ *
  * Base interface of all rules.
  *
  * @author youji.zj
@@ -23,6 +25,8 @@ package com.alibaba.csp.sentinel.slots.block;
 public interface Rule {
 
     /**
+     * 获取该规则的目标资源。
+     *
      * Get target resource of this rule.
      *
      * @return target resource of this rule

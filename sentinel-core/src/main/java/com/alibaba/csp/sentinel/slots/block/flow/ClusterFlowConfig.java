@@ -29,6 +29,8 @@ import java.util.Objects;
 public class ClusterFlowConfig {
 
     /**
+     * 全局唯一识别号。
+     *
      * Global unique ID.
      */
     private Long flowId;

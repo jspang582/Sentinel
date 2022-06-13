@@ -16,6 +16,8 @@
 package com.alibaba.csp.sentinel.slots.block;
 
 /**
+ * 抽象的规则的实体。
+ *
  * Abstract rule entity.
  *
  * @author youji.zj
@@ -24,11 +26,16 @@ package com.alibaba.csp.sentinel.slots.block;
 public abstract class AbstractRule implements Rule {
 
     /**
+     * 资源名
+     *
      * Resource name.
      */
     private String resource;
 
     /**
+     * 将受起源限制的应用程序名称。默认的是default，代表不区分调用来源。
+     * 对于权限规则，多个起源名称可以用逗号('，')分隔。
+     *
      * <p>
      * Application name that will be limited by origin.
      * The default limitApp is {@code default}, which means allowing all origin apps.

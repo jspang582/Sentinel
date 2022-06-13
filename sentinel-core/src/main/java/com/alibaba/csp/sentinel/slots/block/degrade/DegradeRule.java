@@ -21,6 +21,13 @@ import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import java.util.Objects;
 
 /**
+ * 当资源处于不稳定状态时使用降级，这些资源将在下一个定义的时间窗口内降级。有两种方法可以衡量资源是否稳定:
+ *
+ *      平均响应时间(DEGRADE_GRADE_RT):当平均RT超过阈值(' degradeerule '中的'count'，单位为毫秒)时，资源进入准降级状态。
+ *      如果下一个5个请求的RT仍然超过这个阈值，该资源将被降级，这意味着在下一个时间窗口(定义为'timeWindow'，单位为秒)所有对该资源的访问将被阻塞。
+ *
+ *      异常率:当每秒异常数与成功qps的比值超过阈值时，将在下一个窗口阻塞对资源的访问。
+ *
  * <p>
  * Degrade is used when the resources are in an unstable state, these resources
  * will be degraded within the next defined time window. There are two ways to
