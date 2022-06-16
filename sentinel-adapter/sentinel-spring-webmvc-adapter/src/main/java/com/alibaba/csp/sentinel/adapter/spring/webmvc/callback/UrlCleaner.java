@@ -16,6 +16,8 @@
 package com.alibaba.csp.sentinel.adapter.spring.webmvc.callback;
 
 /**
+ * 统一资源目标。
+ *
  * Unify the resource target.
  *
  * @author kaizi2009
@@ -23,6 +25,8 @@ package com.alibaba.csp.sentinel.adapter.spring.webmvc.callback;
 public interface UrlCleaner {
 
     /**
+     * 统一资源目标。
+     *
      * Unify the resource target.
      *
      * @param originUrl the original URL

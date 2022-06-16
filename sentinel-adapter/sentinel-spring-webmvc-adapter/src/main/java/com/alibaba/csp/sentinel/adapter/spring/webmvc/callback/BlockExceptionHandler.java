@@ -21,6 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * 被阻塞请求的处理器。
+ *
  * Handler for the blocked request.
  *
  * @author kaizi2009
@@ -28,6 +30,8 @@ import javax.servlet.http.HttpServletResponse;
 public interface BlockExceptionHandler {
 
     /**
+     * 处理被阻塞的请求。
+     *
      * Handle the request when blocked.
      *
      * @param request  Servlet request

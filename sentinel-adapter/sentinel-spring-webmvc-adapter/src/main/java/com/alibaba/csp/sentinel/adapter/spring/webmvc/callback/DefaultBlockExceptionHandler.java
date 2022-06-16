@@ -16,13 +16,14 @@
 package com.alibaba.csp.sentinel.adapter.spring.webmvc.callback;
 
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.alibaba.csp.sentinel.util.StringUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 
 /**
+ * 被阻塞请求的默认处理器械。
+ *
  * Default handler for the blocked request.
  *
  * @author kaizi2009
@@ -35,6 +36,7 @@ public class DefaultBlockExceptionHandler implements BlockExceptionHandler {
         response.setStatus(429);
 
         PrintWriter out = response.getWriter();
+        // 是不是很熟悉！！！！！
         out.print("Blocked by Sentinel (flow limiting)");
         out.flush();
         out.close();
